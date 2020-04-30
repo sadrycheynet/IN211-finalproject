@@ -1,0 +1,67 @@
+<main class="row no-gutters">
+    <aside class="bg-secondary text-white col-12 col-sm-4 order-12 order-sm-1 p-2">
+      <h2>Mes coordonnées</h2>
+      <hr class="bg-white">
+      <ul class="list-unstyled pl-1">
+        <li class="font-weight-bold mt-1">Email :</li>
+        <li class="font-italic pl-1">sadry.cheynet-soubou@ensta.fr</li>
+        <li class="font-weight-bold mt-1">Téléphone :</li>
+        <li class="font-italic pl-1">(+33)6 95 90 20 96</li>
+        <li class="font-weight-bold mt-1">Adresse :</li>
+        <li class="font-italic pl-1">Allée des Techniques Avancées,</li>
+        <li class="font-italic pl-1">Apt. E113, Bat. E,</li>
+        <li class="font-italic pl-1">91120, Palaiseau</li>
+      </ul>
+    </aside>
+    <section id="resume_body" class="bg-white bg-seamless col-12 col-sm-8 order-1 order-sm-12 p-2">
+      <h1>Contact</h1>
+      <p class="text-justify" style="font-size:1rem;">Pour me contacter pour un projet, une offre d'emploi, ou toute autre raison, vous pouvez remplir le formulaire ci-dessous. Je vous répondrai généralement dans un délai de deux jours.</p>
+      <hr class="bg-secondary">
+      <form>
+          <div class="form-group row">
+            <label for="inputName" class="col-2 col-form-label">Nom</label>
+            <div class="col-10 col-sm-4">
+              <input type="text" class="form-control" id="inputName" placeholder="Nom" required>
+            </div>
+            <label for="inputSurname" class="col-2 col-form-label">Prénom</label>
+            <div class="col-10 col-sm-4">
+              <input type="text" class="form-control" id="inputSurname" placeholder="Prénom" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail" class="col-2 col-form-label">Email</label>
+            <div class="col-10">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">@</div>
+                </div>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                <div class="invalid-feedback">
+                  Veuillez renseigner une adresse email valide.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPhone" class="col-2 col-form-label">Tél.</label>
+            <div class="col-10">
+              <input type="text" class="form-control" id="inputPhone" placeholder="Téléphone" aria-describedby="phoneDisclaimer">
+              <small id="phoneDisclaimer" class="form-text text-muted">
+                Si vous le souhaitez, vous pouvez renseigner votre numéro de téléphone pour faciliter les futurs échanges.
+              </small>
+            </div>
+          </div>
+          <div class="form-group row">
+              <label for="inputMessage" class="col-12 col-lg-2 col-form-label">Votre message</label>
+              <div class="col-12 col-lg-10">
+                <textarea class="form-control" id="inputMessage" name="message" rows="5" placeholder="Entrez votre message ici" required></textarea>
+              </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-2 mx-auto">
+              <button type="submit" class="btn btn-secondary">Envoyer</button>
+            </div>
+          </div>
+        </form>
+    </section>
+</main>

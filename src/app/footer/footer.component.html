@@ -1,0 +1,14 @@
+<footer class="page-footer bg-dark text-white">
+    <div class="row no-gutters">
+        <div class="col-9 col-sm-10 text-white text-center py-3">
+            &copy; Sadry CHEYNET-SOUBOU, 2020
+        </div>
+        <div class="col-3 col-sm-2 languages_container">
+            <!-- Icons from Iconfinder : free for personal use -->
+            <div class="btn-group">
+                <button [class]="{'btn':true, 'active':language==='fr'}" (click)="changeLang('fr')"><img src="assets/img/icons/FR.png" alt="Boutton pour passer en français" class="float-left mx-1 my-2"></button>
+                <button [class]="{'btn':true, 'active':language==='en'}" (click)="changeLang('en')"><img src="assets/img/icons/EN.png" alt="Button to shift in english" class="float-right mx-1 my-2"></button>
+            </div>
+        </div>
+    </div>
+</footer>

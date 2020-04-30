@@ -7,9 +7,11 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LangService {
   language:AllowedLang="en"
-  language$:BehaviorSubject<AllowedLang> = new BehaviorSubject<AllowedLang>(this.language);
-  // language$ is an observable.. when you want to trigger an update in your components you call language$.next(new val here)
-  private _langs:ILangSet;
+  private _langs:ILangSet = LANGS[this.language];
+
+  // translation$ is an observable.. when you want to trigger an update in your components you call translation$.next(new val here)
+  // in RxJS you can have Subject, BehaviourSubject and ReplaySubject
+  translation$:BehaviorSubject<ILangSet> = new BehaviorSubject<ILangSet>(this._langs);
 
   get translation():ILangSet{
     return this._langs;
@@ -17,9 +19,10 @@ export class LangService {
 
   changeLang(language:AllowedLang){
     this.language=language;
-    this.language$.next(language); // we emit a new value in the stream
     localStorage.setItem('language',language);
     this._langs=LANGS[this.language];
+    this.translation$.next(this.translation); // we emit a new value in the stream
+
 
   }
 

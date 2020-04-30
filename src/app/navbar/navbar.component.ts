@@ -14,14 +14,13 @@ export class NavbarComponent implements OnInit {
   constructor(private lang:LangService) { }
 
   ngOnInit(): void {
-    this.language = this.lang.language;
-    this.changeLang(this.language);
-  }
-
-  changeLang(language:AllowedLang){
-    this.language=language;
-    this.lang.changeLang(language);
-    this.translation=this.lang.translation.navbar;
+    // we subscribe here to the changes in the service
+    // you'll do this for all the components that listen for the language stream
+    this.lang.language$.subscribe(language => {
+      this.language =  language
+      this.translation=this.lang.translation.navbar;
+    })
+    
   }
 
 }
